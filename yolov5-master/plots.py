@@ -25,7 +25,7 @@ CONFIG_DIR = user_config_dir()  # Ultralytics settings dir
 RANK = int(os.getenv('RANK', -1))
 matplotlib.rc('font', **{'size': 11})
 matplotlib.use('Agg')  # for writing to files only
-out_label = open('D://yolo5//NBUT2//out_label.txt','w')
+out_label = open('./yolov5-master/out_label.txt','w')
 
 class Colors:
     # Ultralytics color palette https://ultralytics.com/
