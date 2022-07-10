@@ -210,7 +210,7 @@ def detect(opt, save_img=False):
 
     print(f'Done. ({time.time() - t0:.3f}s)')
 @torch.no_grad()
-def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
+def run(weights=ROOT / 'best.pt',  # model.pt path(s)
         source=ROOT / 'data/images',  # file/dir/URL/glob, 0 for webcam
         imgsz=640,  # inference size (pixels)
         conf_thres=0.25,  # confidence threshold
@@ -480,7 +480,7 @@ def main(opt):
     run(**vars(opt))
 
 
-out_label = open('D://yolo5//NBUT1//out_label.txt','w')
+out_label = open('./yolov5-master/out_label.txt','w')
 if __name__ == "__main__":
     opt = parse_opt()
     main(opt)
